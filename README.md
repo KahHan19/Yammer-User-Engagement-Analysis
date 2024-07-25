@@ -5,6 +5,7 @@
 ## Table of Contents
 - [Problem](#problem)
 - [Key Metrics and Dimensions](#key-metrics-and-dimensions)
+- [Tables](#tables)
 - [Summary and Insight](#summary-and-insight)
 
 ## Problem
@@ -14,27 +15,24 @@ The head of the Product team walks over to your desk and asks you what you think
 - **Engagement:** Any interaction done by users in the server
 - **Period:** 28 April 2014 to 25 August 2014
 
-User Table
-![Event](Tables/users.png)
+## Tables
 
-Email Table
-![Event](Tables/email.png)
+### User Table
+<img src="Tables/users.png" alt="User Table" width="600" />
 
-Event Table
-![Event](Tables/events.png)
+### Email Table
+<img src="Tables/email.png" alt="Email Table" width="600" />
 
-User Table
-![Event](Tables/events.png)
-
-
+### Event Table
+<img src="Tables/events.png" alt="Event Table" width="600" />
 
 ## Summary and Insight
-![User Engagement Chart](Yammal/weekly_engage.png)
+<img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="600" />
 
 - **Problem:** What caused the dip at the end of the user engagement chart?
 
 ```sql
-SELECT DATE_TRUNC('week', e.occurred_at) as week_date,
+SELECT DATE_TRUNC('week', e.occurred_at) AS week_date,
        COUNT(DISTINCT e.user_id) AS weekly_active_users
   FROM tutorial.yammer_events e
  WHERE e.event_type = 'engagement'
