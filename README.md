@@ -1,18 +1,21 @@
 # Yammer Case Study
 
-**Yammer** was founded in **2008** as a **freemium enterprise social networking service** used for private communication within organizations. It was acquired by **Microsoft for $1.2 billion in 2012** and is now available in all **Office 365 products**.
+**Yammer** was founded in **2008** as a **freemium enterprise social networking service** designed for private communication within organizations. It was acquired by **Microsoft for $1.2 billion in 2012** and is now available in all **Office 365 products**.
 
 ## Table of Contents
 - [Problem](#problem)
 - [Key Metrics and Dimensions](#key-metrics-and-dimensions)
-- [Tables](#tables)
 - [Summary and Insight](#summary-and-insight)
+- [Identify Potential Problems](#identify-potential-problems)
+- [Investigate Data](#investigate-data)
+- [Identified Issues and Recommendations](#identified-issues-and-recommendations)
+- [Appendix](#appendix)
 
 ## Problem
-The head of the Product team walks over to your desk and asks you what you think about the latest activity on the user engagement dashboards. You fire them up, and **something immediately jumps out**.
+The head of the Product team approaches you with concerns about the latest activity on the user engagement dashboards. Upon reviewing the data, you notice a significant issue.
 
 ## Key Metrics and Dimensions
-- **Engagement:** Any interaction done by users in the server
+- **Engagement:** Any interaction by users within the server.
 - **Period:** 28 April 2014 to 25 August 2014
 
 ## Summary and Insight
@@ -20,24 +23,11 @@ The head of the Product team walks over to your desk and asks you what you think
 
 - **Problem:** What caused the dip at the end of the user engagement chart?
 
-```sql
-SELECT DATE_TRUNC('week', e.occurred_at) AS week_date,
-       COUNT(DISTINCT e.user_id) AS weekly_active_users
-  FROM tutorial.yammer_events e
- WHERE e.event_type = 'engagement'
-   AND e.event_name = 'login'
- GROUP BY 1
- ORDER BY 1;
-```
+## 1. Initial Analysis: Insights from the Graph and Data
 
-## 1. Initial Analysis: What can we understand from the graph and data
+The graph shows the total number of weekly active users who logged in and engaged with various app features, such as commenting, sending emails, and searching. User engagement demonstrated a steady upward trend through mid-2014, but there was a notable drop at the end of July, reducing the engagement level to those seen in June. This lower engagement persisted through August.
 
-The graph depicts the aggregate number of weekly active users who logged in and interacted with various app features, such as commenting, sending emails, and searching, as detailed in the event table. User engagement demonstrated a consistent upward trend through mid-2014. However, a significant drop occurred at the end of July, with a reduction of approximately 200 users, reverting engagement levels to those observed in June. This lower level of engagement persisted through August.
-
-Although the graph does not explicitly explain the cause of the engagement decline, the accompanying data tables—which include information on demographics such as location, device usage, email interactions, and platform sign-ups—may offer valuable insights into the underlying reasons for this decrease.
-
-
-
+While the graph does not directly explain the cause of the engagement decline, the accompanying data tables—which include information on demographics such as location, device usage, email interactions, and platform sign-ups—may provide valuable insights into the underlying reasons for this decrease.
 
 ## 2. Identify Potential Problems
 
@@ -51,8 +41,6 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 - **Location-Based Factors:** As a global application, Yammer may face competition from local alternatives in specific regions. Local competitors could potentially attract users away from Yammer, affecting its overall engagement and traction in those areas.
 
-
-
 ## 3. Investigate Data
 
 ### 3.1 Weekly Active Users
@@ -60,9 +48,7 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 - **Investigate User Trends:** Conduct a detailed analysis of active user trends to understand their correlation with user engagement levels. Initial observations suggest that the number of active users aligns consistently with engagement counts. However, this correlation alone does not fully account for the decline in engagement. To gain a complete understanding, further investigation is necessary to identify any additional factors or underlying issues that may be contributing to this decline. This may involve examining specific user behaviors, feature usage patterns, and potential external influences affecting engagement.
 
-
 ### 3.2 Product Growth
-
 ![User Growth Table](Yammal/user_growth.png)
 
 - **Definitions:**
@@ -72,47 +58,49 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 - **User Growth:** The user base for the product is expanding at a healthy rate, with no apparent issues in the sign-up process. There are no indications of a decline in the number of newly activated users. This suggests that the user acquisition process is functioning well and that new user activation rates remain stable.
 
-### 3.3 Broken Feature:
-
+### 3.3 Broken Feature
 ![Engagement Tools Table](Yammal/image.png)
 
 - **Explanation:** This plot illustrates the frequency of interactions with various features of the application. These interactions are aggregated to contribute to the overall engagement calculation. The primary objective of this plot is to determine if any features are malfunctioning, which could prevent users from accessing them and, consequently, reduce overall engagement.
 
 - **Observation:** All features continue to receive interactions with a noticeable reduction in user engagement across the board. This indicates that there are no broken features, as each feature is still functional and being used. The observed decline in engagement is not attributed to any specific feature malfunctions.
 
-
-### 3.4 Email:
-
+### 3.4 Email
 ![Email Table](Yammal/email.png)
 
 - **System:** The system appears to be functioning correctly, as it continues to send out weekly digest emails to users without any reported faults.
 
 - **User:** The email open rate remains consistent, with a slight increase observed. However, there has been a noticeable drop in the click-through rate for links included in the weekly digest. This suggests that while users are still opening the emails, they are less frequently engaging with the links. This decline could be due to reduced interest in the content or potential issues with accessing the links, which might be contributing to the overall fall in engagement.
 
+### 3.5 Device
+![Device Table](Yammal/device.png)
 
-### 3.5 Device:
+- **Devices:** Analysis reveals that while overall weekly user engagement has decreased, engagement among computer users remains relatively stable. In contrast, there has been a significant decline in engagement among phone users. Both tablet and phone users have experienced a drop in engagement to below-average levels. This suggests a potential issue with the Yammer app on phone and tablet devices. Possible causes include problems with the app's ability to access or display links correctly, or recent updates to phone operating systems that may have introduced compatibility issues with the links. Further investigation is needed to determine the exact cause and address these issues to improve engagement across these devices.
 
-![Email Table](Yammal/deice.png)
+## Identified Issues and Recommendations
 
+- **Identified Issues:** All features appear to be functioning correctly, indicating that the source of the dip in weekly engagement is related to the reduction in click-through rates for emails. This issue is particularly evident among phone and tablet users, suggesting a potential software incompatibility with mobile systems.
 
+- **Recommendation:** 
+  1. **Investigate Recent Updates:** Examine whether there have been any recent updates to phone or tablet operating systems around the time of the engagement decline.
+  2. **Check Email Accessibility:** Assess whether there are issues with accessing or interacting with email links on mobile devices.
+  3. **Review Client-Side Feedback:** Review user feedback and client-side reports to identify any accessibility problems or usability issues related to email interactions on mobile devices.
 
 ## Appendix
 
+### Tables
 
-## Tables
-
-### User Table
+#### User Table
 <img src="Tables/users.png" alt="User Table" width="400" height="300" />
 
-### Email Table
+#### Email Table
 <img src="Tables/email.png" alt="Email Table" width="400" height="300" />
 
-### Event Table
+#### Event Table
 <img src="Tables/events.png" alt="Event Table" width="400" height="300" />
 
-
-
 ## SQL Code
+
 
 ### SQL Problem
 
