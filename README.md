@@ -45,7 +45,7 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 - **Device Incompatibility:** The Yammer app or website might not function optimally on certain devices, which could prevent users from accessing various tools and features. This incompatibility could contribute to decreased user engagement and satisfaction.
 
-- **Declined Growth:** A potential decline in new user sign-ups could be contributing to lower engagement levels. If the sign-up process is experiencing issues or bugs, it might prevent new users from registering, thereby affecting overall engagement with the Yammer app.
+- **Product Growth:** A potential decline in new user sign-ups could be contributing to lower engagement levels. If the sign-up process is experiencing issues or bugs, it might prevent new users from registering, thereby affecting overall engagement with the Yammer app.
 
 - **Time of Year:** Engagement levels may be impacted by seasonal factors such as public holidays or vacations. These periods can lead to lower user activity due to reduced availability or engagement from users in different regions.
 
@@ -59,6 +59,19 @@ Although the graph does not explicitly explain the cause of the engagement decli
 ![Active User Table](Yammal/Active_users.png)
 
 - **Investigate User Trends:** Conduct a detailed analysis of active user trends to understand their correlation with user engagement levels. Initial observations suggest that the number of active users aligns consistently with engagement counts. However, this correlation alone does not fully account for the decline in engagement. To gain a complete understanding, further investigation is necessary to identify any additional factors or underlying issues that may be contributing to this decline. This may involve examining specific user behaviors, feature usage patterns, and potential external influences affecting engagement.
+
+
+### 3.2 Product Growth
+
+![Active User Table](Yammal/user_growth.png)
+
+- **Definitions:**
+  - **Active User:** A user who has signed up, activated their profile, and is actively engaging with the product.
+  - **Pending User:** A user who has signed up for an account but has not yet completed authentication or engaged with the product's content.
+  - **New User:** A user who has recently created an account but may not yet be fully activated or engaged.
+
+- **User Growth:** The user base for the product is expanding at a healthy rate, with no apparent issues in the sign-up process. There are no indications of a decline in the number of newly activated users. This suggests that the user acquisition process is functioning well and that new user activation rates remain stable.
+
 
 
 
