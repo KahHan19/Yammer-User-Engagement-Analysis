@@ -15,17 +15,6 @@ The head of the Product team walks over to your desk and asks you what you think
 - **Engagement:** Any interaction done by users in the server
 - **Period:** 28 April 2014 to 25 August 2014
 
-## Tables
-
-### User Table
-<img src="Tables/users.png" alt="User Table" width="400" height="300" />
-
-### Email Table
-<img src="Tables/email.png" alt="Email Table" width="400" height="300" />
-
-### Event Table
-<img src="Tables/events.png" alt="Event Table" width="400" height="300" />
-
 ## Summary and Insight
 <img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="600" />
 
@@ -39,3 +28,35 @@ SELECT DATE_TRUNC('week', e.occurred_at) AS week_date,
    AND e.event_name = 'login'
  GROUP BY 1
  ORDER BY 1;
+```
+
+## 1. Understand: What can we understand from the graph and data
+
+The graph depicts the aggregate number of weekly active users who logged in and interacted with various app features, such as commenting, sending emails, and searching, as detailed in the event table. User engagement demonstrated a consistent upward trend through mid-2014. However, a significant drop occurred at the end of July, with a reduction of approximately 200 users, reverting engagement levels to those observed in June. This lower level of engagement persisted through August.
+
+Although the graph does not explicitly explain the cause of the engagement decline, the accompanying data tables—which include information on demographics such as location, device usage, email interactions, and platform sign-ups—may offer valuable insights into the underlying reasons for this decrease.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Tables
+
+### User Table
+<img src="Tables/users.png" alt="User Table" width="400" height="300" />
+
+### Email Table
+<img src="Tables/email.png" alt="Email Table" width="400" height="300" />
+
+### Event Table
+<img src="Tables/events.png" alt="Event Table" width="400" height="300" />
+
