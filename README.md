@@ -53,8 +53,12 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 
 
+## 3. Investigate Data
 
+### 3.1 Weekly Active Users
 
+<img src="Yammal/users.png" alt="User Table" width="400" height="300" />
+- Investigae the trend of active users to understand the correlation with user engagement
 
 
 
