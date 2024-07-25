@@ -145,7 +145,7 @@ ORDER BY week_start_date;
 
 
 ### 3.3 Broken Feautures
- Excel
+*No SQL code available; refer to the [Excel data]() for detailed information.*
 
 
 ### 3.4 Email
