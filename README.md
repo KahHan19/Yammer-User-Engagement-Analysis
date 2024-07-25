@@ -1,14 +1,14 @@
 # Yammer User Engagement Analysis
 
 
+**Yammer**, founded in **2008**, is a **freemium enterprise social networking service** designed for private communication within organizations. Acquired by **Microsoft for $1.2 billion in 2012**, Yammer is now integrated into all **Office 365 products**.
 
-**Yammer** was founded in **2008** as a **freemium enterprise social networking service** designed for private communication within organizations. It was acquired by **Microsoft for $1.2 billion in 2012** and is now available in all **Office 365 products**.
-
-The [Dataset](https://mode.com/sql-tutorial/a-drop-in-user-engagement/) is primarily processed using SQL, with some data further analyzed through Excel pivot tables. This approach allows for the creation of an interactive dashboard to observe the impact of various variables on the product's engagement count.
+The [Dataset](https://mode.com/sql-tutorial/a-drop-in-user-engagement/) used in this analysis is primarily processed with SQL, with additional data analysis performed using Excel pivot tables. This methodology supports the creation of an interactive dashboard to explore how various factors impact the product's engagement metrics.
 
 ### Table Information and SQL Code
 
-Details about the tables used in this analysis can be found in the [**Tables**](#Tables) section of the appendix. Additionally, the SQL code used to extract and process the data is provided in the [**SQL**](#sql-code) Code section of the appendix below.
+- **Table Details:** Information about the tables used in this analysis is available in the [**Tables**](#tables) section of the appendix.
+- **SQL Code:** The SQL code for data extraction and processing is provided in the [**SQL Code**](#sql-code) section of the appendix below.
 
 
 ## Table of Contents
