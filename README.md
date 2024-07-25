@@ -14,4 +14,13 @@ Period: 28 April 2014 to 25 August 2014
 ## Summary and Insight
 ![Alt text](Weekly_User_Engagement.png)
  - Probelm: What	caused	the	dip	at	the	end	of the	user engagement chart.
+
+SELECT DATE_TRUNC('week', e.occurred_at) as week_date,
+       COUNT(DISTINCT e.user_id) AS weekly_active_users
+  FROM tutorial.yammer_events e
+ WHERE e.event_type = 'engagement'
+   AND e.event_name = 'login'
+ GROUP BY 1
+ ORDER BY 1
+
  
