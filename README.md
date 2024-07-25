@@ -15,7 +15,7 @@ The head of the Product team walks over to your desk and asks you what you think
 - **Period:** 28 April 2014 to 25 August 2014
 
 
-![Event](Table/events.png)
+![Event](Tables/events.png)
 
 
 
