@@ -57,8 +57,8 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 ### 3.1 Weekly Active Users
 
-<img src="Yammal/users.png" alt="User Table" width="400" height="300" />
-- Investigae the trend of active users to understand the correlation with user engagement
+<img src="Yammal/Active_users.png" alt="Active User Table" width="400" height="300" />
+- **Investigate User Trends:** Conduct a detailed analysis of active user trends to understand their correlation with user engagement levels. Initial observations suggest that the number of active users aligns consistently with engagement counts. However, this correlation alone does not fully account for the decline in engagement. To gain a complete understanding, further investigation is necessary to identify any additional factors or underlying issues that may be contributing to this decline. This may involve examining specific user behaviors, feature usage patterns, and potential external influences affecting engagement.
 
 
 
