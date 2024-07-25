@@ -1,4 +1,6 @@
-Yammer was founded in 2008 as a freemium enterprise social networking service used for private communication within organizations. It was acquired by Microsoft for $1.2 billion in 2012 and is now available in all Office 365 products.
+# Yammer Case Study
+
+**Yammer** was founded in **2008** as a **freemium enterprise social networking service** used for private communication within organizations. It was acquired by **Microsoft for $1.2 billion in 2012** and is now available in all **Office 365 products**.
 
 ## Table of Contents
 - [Problem](#problem)
@@ -6,7 +8,7 @@ Yammer was founded in 2008 as a freemium enterprise social networking service us
 - [Summary and Insight](#summary-and-insight)
 
 ## Problem
-The head of the Product team walks over to your desk and asks you what you think about the latest activity on the user engagement dashboards. You fire them up, and something immediately jumps out.
+The head of the Product team walks over to your desk and asks you what you think about the latest activity on the user engagement dashboards. You fire them up, and **something immediately jumps out**.
 
 ## Key Metrics and Dimensions
 - **Engagement:** Any interaction done by users in the server
@@ -15,7 +17,7 @@ The head of the Product team walks over to your desk and asks you what you think
 ## Summary and Insight
 ![User Engagement Chart](Yammal/weekly_engage.png)
 
-- **Problem:** What caused the dip at the end of the user engagement chart.
+- **Problem:** What caused the dip at the end of the user engagement chart?
 
 ```sql
 SELECT DATE_TRUNC('week', e.occurred_at) as week_date,
