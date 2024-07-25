@@ -18,13 +18,13 @@ The head of the Product team walks over to your desk and asks you what you think
 ## Tables
 
 ### User Table
-<img src="Tables/users.png" alt="User Table" width="600" />
+<img src="Tables/users.png" alt="User Table" width="400" height="300" />
 
 ### Email Table
-<img src="Tables/email.png" alt="Email Table" width="600" />
+<img src="Tables/email.png" alt="Email Table" width="400" height="300" />
 
 ### Event Table
-<img src="Tables/events.png" alt="Event Table" width="600" />
+<img src="Tables/events.png" alt="Event Table" width="400" height="300" />
 
 ## Summary and Insight
 <img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="600" />
