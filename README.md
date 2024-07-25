@@ -16,7 +16,7 @@ The head of the Product team walks over to your desk and asks you what you think
 - **Period:** 28 April 2014 to 25 August 2014
 
 ## Summary and Insight
-<img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="600" />
+<img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="800" />
 
 - **Problem:** What caused the dip at the end of the user engagement chart?
 
