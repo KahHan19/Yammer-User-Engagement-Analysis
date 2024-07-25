@@ -14,6 +14,13 @@ The head of the Product team walks over to your desk and asks you what you think
 - **Engagement:** Any interaction done by users in the server
 - **Period:** 28 April 2014 to 25 August 2014
 
+
+![Event](Table/events.png)
+
+
+
+
+
 ## Summary and Insight
 ![User Engagement Chart](Yammal/weekly_engage.png)
 
