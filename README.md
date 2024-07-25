@@ -1,4 +1,4 @@
-# Yammer_CaseStudy_SQL
+# Yammer CaseStudy
 
 Yammer was founded 2008 as a freemium enterprise social networking service used for private communication within organizations. It was acquired by Microsoft for $1.2 billion in 2012 and is now available in all Office 365 products.
 
