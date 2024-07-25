@@ -20,19 +20,16 @@ Details about the tables used in this analysis can be found in the [**Tables**](
 - [Identified Issues and Recommendations](#identified-issues-and-recommendations)
 - [Appendix](#appendix)
 
-## Problem
-The head of the Product team approaches you with concerns about the latest activity on the user engagement dashboards. Upon reviewing the data, you notice a significant issue.
 
-## Key Metrics and Dimensions
-- **Engagement:** Any interaction by users within the server.
-- **Period:** 28 April 2014 to 25 August 2014
 
 ## Summary and Insight
 <img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="800" />
 
 **Problem:** The Product team has expressed concerns about recent trends in the user engagement dashboards. After examining the data, a significant issue has been identified. The key question is: what caused the decline observed at the end of the user engagement chart?
 
-
+## Key Metrics and Dimensions
+- **Engagement:** Any interaction by users within the server.
+- **Period:** 28 April 2014 to 25 August 2014
 
 ## 1. Initial Analysis: Insights from the Graph and Data
 
