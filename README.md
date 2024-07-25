@@ -8,7 +8,7 @@ The [Dataset](https://mode.com/sql-tutorial/a-drop-in-user-engagement/) is prima
 
 ### Table Information and SQL Code
 
-Details about the tables used in this analysis can be found in the [**Tables**](#Tables) section of the appendix. Additionally, the SQL code used to extract and process the data is provided in the [**SQL**](#SQLCode) Code section of the appendix below.
+Details about the tables used in this analysis can be found in the [**Tables**](#Tables) section of the appendix. Additionally, the SQL code used to extract and process the data is provided in the [**SQL**](#sql-code) Code section of the appendix below.
 
 
 ## Table of Contents
