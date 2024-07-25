@@ -63,7 +63,7 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 ### 3.2 Product Growth
 
-![Active User Table](Yammal/user_growth.png)
+![User Growth Table](Yammal/user_growth.png)
 
 - **Definitions:**
   - **Active User:** A user who has signed up, activated their profile, and is actively engaging with the product.
@@ -72,12 +72,47 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 - **User Growth:** The user base for the product is expanding at a healthy rate, with no apparent issues in the sign-up process. There are no indications of a decline in the number of newly activated users. This suggests that the user acquisition process is functioning well and that new user activation rates remain stable.
 
+### 3.3 Broken Feature:
 
+![Engagement Tools Table](Yammal/image.png)
+
+- **Explanation:** This plot illustrates the frequency of interactions with various features of the application. These interactions are aggregated to contribute to the overall engagement calculation. The primary objective of this plot is to determine if any features are malfunctioning, which could prevent users from accessing them and, consequently, reduce overall engagement.
+
+- **Observation:** All features continue to receive interactions with a noticeable reduction in user engagement across the board. This indicates that there are no broken features, as each feature is still functional and being used. The observed decline in engagement is not attributed to any specific feature malfunctions.
+
+
+### 3.4 Email:
+
+![Email Table](Yammal/email.png)
+
+- **System:** The system appears to be functioning correctly, as it continues to send out weekly digest emails to users without any reported faults.
+
+- **User:** The email open rate remains consistent, with a slight increase observed. However, there has been a noticeable drop in the click-through rate for links included in the weekly digest. This suggests that while users are still opening the emails, they are less frequently engaging with the links. This decline could be due to reduced interest in the content or potential issues with accessing the links, which might be contributing to the overall fall in engagement.
+
+
+### 3.5 Device:
+
+![Email Table](Yammal/deice.png)
 
 
 
 ## Appendix
 
+
+## Tables
+
+### User Table
+<img src="Tables/users.png" alt="User Table" width="400" height="300" />
+
+### Email Table
+<img src="Tables/email.png" alt="Email Table" width="400" height="300" />
+
+### Event Table
+<img src="Tables/events.png" alt="Event Table" width="400" height="300" />
+
+
+
+## SQL Code
 
 ### SQL Problem
 
@@ -121,18 +156,52 @@ ORDER BY week_start_date;
 ```
 
 
-### 3.1 
+### 3.3 Broken Feautures
  Excel
 
 
-## Tables
+### 3.4 Email
+```sql
+SELECT 
+    DATE_TRUNC('week', occurred_at) AS week_date,
+    COUNT(DISTINCT(CASE WHEN action = 'sent_weekly_digest' THEN user_id ELSE NULL END)) AS sent_weekly_digest_count,
+    COUNT(DISTINCT(CASE WHEN action = 'email_open' THEN user_id ELSE NULL END)) AS email_open_count,
+    COUNT(DISTINCT(CASE WHEN action = 'email_clickthrough' THEN user_id ELSE NULL END)) AS email_clickthrough_count,
+    COUNT(DISTINCT user_id) as user_count
+FROM 
+    tutorial.yammer_emails e
+GROUP BY 
+    DATE_TRUNC('week', occurred_at)
+ORDER BY 
+    week_date ASC;
+```
 
-### User Table
-<img src="Tables/users.png" alt="User Table" width="400" height="300" />
-
-### Email Table
-<img src="Tables/email.png" alt="Email Table" width="400" height="300" />
-
-### Event Table
-<img src="Tables/events.png" alt="Event Table" width="400" height="300" />
-
+### 3.5 Devices
+```sql
+SELECT 
+    DATE_TRUNC('week', occurred_at) AS week,
+    COUNT(DISTINCT user_id) AS active_weekly_user,
+    COUNT(DISTINCT CASE WHEN device IN ('iphone 5', 'samsung galaxy s4', 'nexus 5', 'iphone 5s', 'iphone 4s', 
+                                       'nexus 7', 'nokia lumia 635', 'nexus 10', 'htc one', 'amazon fire phone', 
+                                       'samsung galaxy note') 
+                        THEN user_id 
+                        ELSE NULL END) AS phone_users,
+    COUNT(DISTINCT CASE WHEN device IN ('ipad air', 'ipad mini', 'kindle fire', 'samsung galaxy tablet') 
+                        THEN user_id 
+                        ELSE NULL END) AS tablet_users,
+    COUNT(DISTINCT CASE WHEN device IN ('lenovo thinkpad', 'macbook pro', 'macbook air', 'dell inspiron desktop',
+                                       'dell inspiron notebook', 'asus chromebook', 'acer aspire notebook', 
+                                       'hp pavilion desktop', 'acer aspire desktop', 'windows surface', 
+                                       'mac mini') 
+                        THEN user_id 
+                        ELSE NULL END) AS computer_users
+FROM 
+    tutorial.yammer_events
+WHERE 
+    event_type = 'engagement'
+    AND event_name = 'login'
+GROUP BY 
+    DATE_TRUNC('week', occurred_at)
+ORDER BY 
+    week;
+```
