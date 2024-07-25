@@ -30,7 +30,9 @@ The head of the Product team approaches you with concerns about the latest activ
 ## Summary and Insight
 <img src="Yammal/weekly_engage.png" alt="User Engagement Chart" width="800" />
 
-- **Problem:** What caused the dip at the end of the user engagement chart?
+**Problem:** The Product team has expressed concerns about recent trends in the user engagement dashboards. After examining the data, a significant issue has been identified. The key question is: what caused the decline observed at the end of the user engagement chart?
+
+
 
 ## 1. Initial Analysis: Insights from the Graph and Data
 
