@@ -6,6 +6,10 @@
 
 The [Dataset](https://mode.com/sql-tutorial/a-drop-in-user-engagement/) is primarily processed using SQL, with some data further analyzed through Excel pivot tables. This approach allows for the creation of an interactive dashboard to observe the impact of various variables on the product's engagement count.
 
+### Table Information and SQL Code
+
+Details about the tables used in this analysis can be found in the **Tables** section of the appendix. Additionally, the SQL code used to extract and process the data is provided in the **SQL Code** section of the appendix below.
+
 
 ## Table of Contents
 - [Problem](#problem)
