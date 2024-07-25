@@ -14,10 +14,17 @@ The head of the Product team walks over to your desk and asks you what you think
 - **Engagement:** Any interaction done by users in the server
 - **Period:** 28 April 2014 to 25 August 2014
 
+User Table
+![Event](Tables/users.png)
 
+Email Table
+![Event](Tables/email.png)
+
+Event Table
 ![Event](Tables/events.png)
 
-
+User Table
+![Event](Tables/events.png)
 
 
 
