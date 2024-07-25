@@ -1,4 +1,6 @@
-# Yammer Case Study
+# Yammer User Engagement Analysis
+
+
 
 **Yammer** was founded in **2008** as a **freemium enterprise social networking service** designed for private communication within organizations. It was acquired by **Microsoft for $1.2 billion in 2012** and is now available in all **Office 365 products**.
 
