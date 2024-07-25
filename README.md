@@ -99,13 +99,14 @@ While the graph does not directly explain the cause of the engagement decline, t
 ### Tables
 
 #### User Table
-<img src="Tables/users.png" alt="User Table" width="400" height="300" />
+![Active User Table](Tables/users.png)
 
 #### Email Table
-<img src="Tables/email.png" alt="Email Table" width="400" height="300" />
+![Email Table](Tables/email.png)
+
 
 #### Event Table
-<img src="Tables/events.png" alt="Event Table" width="400" height="300" />
+![Event Table](Tables/events.png)
 
 ## SQL Code
 
