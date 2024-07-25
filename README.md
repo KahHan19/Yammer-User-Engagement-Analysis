@@ -2,7 +2,8 @@
 
 **Yammer** was founded in **2008** as a **freemium enterprise social networking service** designed for private communication within organizations. It was acquired by **Microsoft for $1.2 billion in 2012** and is now available in all **Office 365 products**.
 
-[Dataset](https://mode.com/sql-tutorial/a-drop-in-user-engagement/)
+The [Dataset](https://mode.com/sql-tutorial/a-drop-in-user-engagement/) is primarily processed using SQL, with some data further analyzed through Excel pivot tables. This approach allows for the creation of an interactive dashboard to observe the impact of various variables on the product's engagement count.
+
 
 ## Table of Contents
 - [Problem](#problem)
@@ -84,7 +85,7 @@ While the graph does not directly explain the cause of the engagement decline, t
 - **Identified Issues:** All features appear to be functioning correctly, indicating that the source of the dip in weekly engagement is related to the reduction in click-through rates for emails. This issue is particularly evident among phone and tablet users, suggesting a potential software incompatibility with mobile systems.
 
 - **Recommendation:** 
-  1. **Investigate Recent Updates:** Examine whether there have been any recent updates to phone or tablet operating systems around the time of the engagement decline.
+  1. **Investigate Recent Updates:** Examine whether there have been any recent updates to phone or tablet operating systems around the time of the engagement decline. It is recommended to check with the backend team to investigate if there are any issues with the links and check with the front-end team to ensure the links are visible and accessible.
   2. **Check Email Accessibility:** Assess whether there are issues with accessing or interacting with email links on mobile devices.
   3. **Review Client-Side Feedback:** Review user feedback and client-side reports to identify any accessibility problems or usability issues related to email interactions on mobile devices.
 
