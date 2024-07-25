@@ -12,7 +12,6 @@ Period: 28 April 2014 to 25 August 2014
 
 
 ## Summary and Insight
-
-
+![Alt text](Weekly_user_engagement.png)
  - Probelm: What	caused	the	dip	at	the	end	of the	user engagement chart.
  
