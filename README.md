@@ -76,6 +76,55 @@ Although the graph does not explicitly explain the cause of the engagement decli
 
 
 
+## Appendix
+
+
+### SQL Problem
+
+```sql
+SELECT DATE_TRUNC('week', e.occurred_at) AS week_date,
+       COUNT(DISTINCT e.user_id) AS weekly_active_users
+  FROM tutorial.yammer_events e
+ WHERE e.event_type = 'engagement'
+   AND e.event_name = 'login'
+ GROUP BY 1
+ ORDER BY 1;
+```
+
+
+### 3.1 Weekly Active Users
+
+```sql
+SELECT DATE_TRUNC('week', e.occurred_at) as week_date,
+       COUNT(DISTINCT e.user_id) AS weekly_active_users
+  FROM tutorial.yammer_events e
+ WHERE e.event_type = 'engagement'
+   AND e.event_name = 'login'
+ GROUP BY 1
+ ORDER BY 1;
+
+```
+
+
+### 3.2 Product Growth
+
+
+```sql
+SELECT DATE_TRUNC('week', e.occurred_at) AS week_start_date,
+      COUNT(DISTINCT(CASE WHEN e.event_type = 'engagement' THEN user_id END)) AS active_users,
+      COUNT(DISTINCT(CASE WHEN e.event_type = 'signup_flow' THEN user_id END)) AS signup_users,
+      COUNT(DISTINCT user_id) AS total_users
+FROM tutorial.yammer_events e
+GROUP BY week_start_date
+ORDER BY week_start_date;
+
+```
+
+
+### 3.1 
+ Excel
+
+
 ## Tables
 
 ### User Table
